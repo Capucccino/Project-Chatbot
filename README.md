@@ -39,19 +39,22 @@ List of movies from studio Ghibli
 
 ![image](https://user-images.githubusercontent.com/64537874/112734745-ec02f980-8f47-11eb-9fb4-a682788a1be3.png)
 
-Information from a movie `title - original_title - original_title_romanised - description - director - producer - release_date`
+Information about a movie `title - original_title - original_title_romanised - description - director - producer - release_date`
+![image](https://user-images.githubusercontent.com/64537874/112735140-91b76800-8f4a-11eb-81c9-c1c396e97f71.png)
+![image](https://user-images.githubusercontent.com/64537874/112735166-a72c9200-8f4a-11eb-8abd-9fbc93c91d5a.png)
 
 ![image](https://user-images.githubusercontent.com/64537874/112734801-4f8d2700-8f48-11eb-9337-068c89928731.png)
 ![image](https://user-images.githubusercontent.com/64537874/112734859-9aa73a00-8f48-11eb-9d7c-d335f087168d.png)
 ![image](https://user-images.githubusercontent.com/64537874/112734972-67b17600-8f49-11eb-9a84-6d1c57df4717.png)
+![image](https://user-images.githubusercontent.com/64537874/112735018-a810f400-8f49-11eb-926f-c025d2a12f80.png)
 
+Informations about species in Ghibli movies
 
+![image](https://user-images.githubusercontent.com/64537874/112735049-e0b0cd80-8f49-11eb-8d84-c0710c569e8d.png)
 
+Informations about vehicles in Ghibli movies
 
-
-
-
-
+![image](https://user-images.githubusercontent.com/64537874/112735091-42713780-8f4a-11eb-9722-b5c8452515bc.png)
 
 
 ## Anime Recommender
