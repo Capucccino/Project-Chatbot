@@ -14,8 +14,8 @@ from tqdm import tqdm
 
 
 #import movie csv with description, and more than 10 user ratings
-movies = pd.read_csv('hhe.csv', sep=',')#, index_col=0, names=['title', 'genres'], skiprows=1)
-ratings = pd.read_csv('rating (1).csv', sep =',')
+movies = pd.read_csv('data.csv', sep=',')#, index_col=0, names=['title', 'genres'], skiprows=1)
+ratings = pd.read_csv('rating.csv', sep =',')
 
 
 # movies preparation 
