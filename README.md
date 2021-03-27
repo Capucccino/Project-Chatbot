@@ -63,13 +63,26 @@ __Information about vehicles in Ghibli movies__
 ![image](https://user-images.githubusercontent.com/64537874/112735091-42713780-8f4a-11eb-9722-b5c8452515bc.png)
 
 
+
+
 ## Anime Recommender
+
+
 
 ### How to use :
 
-To use the recomender for our anime chatbot you have to open either the python file or the .ipynb (collab works well) and link the script to the ratings csv and the hhe csv. Once that is done you have to run the script and follow the guided menu. The recommendation may take quite a bit of time since we are using extremely large amounts of data.
-The code asks to choose your favorite anime out of ten propositions. It does this 3 times and then it proposes 3 new animes that you could enjoy.
+To use the recomender for our anime chatbot you have to :
+* open either the python file or the .ipynb (collab works well)
+* link the script to the ratings csv and the hhe csv. 
+Once that is done you have to run the script and follow the guided menu. The recommendation may take quite a bit of time since we are using extremely large amounts of data.
+The code asks to choose your favorite anime out of ten propositions. It does this 3 times and then it suggests 3 new animes that you could enjoy.
 
 The script retrieves data from the 2 csv files and then links all the animes to the users ratings. Once we have a dictionary with all the users and their ratings on different animes we use collaborative filtering. We took the base from the week six project and adapte dit to our anime list. In our project we used the cosine similarity mesure wich treates missing ratings as negative. This way of mesure calculates the similarity between two vectors of an inner product space. It is measured by the cosine of the angle between two vectors and determines wheter two vectors and pointing in roughly the same direction. 
+
+![image](https://user-images.githubusercontent.com/64537874/112736618-72bdd380-8f54-11eb-82b1-7abfc40d73c7.png)
+![image](https://user-images.githubusercontent.com/64537874/112736624-7cdfd200-8f54-11eb-82ee-aae96e8a8bfd.png)
+![image](https://user-images.githubusercontent.com/64537874/112736649-a1d44500-8f54-11eb-892e-190cbfedbcc2.png)
+![image](https://user-images.githubusercontent.com/64537874/112736628-8406e000-8f54-11eb-885e-57e75d58e1b8.png)
+
 
 
