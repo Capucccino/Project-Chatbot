@@ -48,13 +48,22 @@ Information about a movie `title - original_title - original_title_romanised - d
 ![image](https://user-images.githubusercontent.com/64537874/112734972-67b17600-8f49-11eb-9a84-6d1c57df4717.png)
 ![image](https://user-images.githubusercontent.com/64537874/112735018-a810f400-8f49-11eb-926f-c025d2a12f80.png)
 
-Informations about species in Ghibli movies
+Information about species in Ghibli movies
 
 ![image](https://user-images.githubusercontent.com/64537874/112735049-e0b0cd80-8f49-11eb-8d84-c0710c569e8d.png)
 
-Informations about vehicles in Ghibli movies
+Information about vehicles in Ghibli movies
 
 ![image](https://user-images.githubusercontent.com/64537874/112735091-42713780-8f4a-11eb-9722-b5c8452515bc.png)
 
 
 ## Anime Recommender
+
+### How to use :
+
+To use the recomender for our anime chatbot you have to open either the python file or the .ipynb (collab works well) and link the script to the ratings csv and the hhe csv. Once that is done you have to run the script and follow the guided menu. The recommendation may take quite a bit of time since we are using extremely large amounts of data.
+The code asks to choose your favorite anime out of ten propositions. It does this 3 times and then it proposes 3 new animes that you could enjoy.
+
+The script retrieves data from the 2 csv files and then links all the animes to the users ratings. Once we have a dictionary with all the users and their ratings on different animes we use collaborative filtering. We took the base from the week six project and adapte dit to our anime list. In our project we used the cosine similarity mesure wich treates missing ratings as negative. This way of mesure calculates the similarity between two vectors of an inner product space. It is measured by the cosine of the angle between two vectors and determines wheter two vectors and pointing in roughly the same direction. 
+
+
