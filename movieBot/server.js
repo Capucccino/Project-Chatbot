@@ -28,11 +28,55 @@ let currentWeather = (response) => {
 let listofmoviesghibli = (response) => {
   let movielist = []
   for (let pas = 0; pas < response.length; pas++) {
-    movielist.push(response[pas]["title"])
+    movielist.push(response[pas]["title"] + "\n")
   }
-
   return movielist
 }
+
+let listofspeciesghibli = (response) => {
+  let specielist = []
+  for (let pas = 0; pas < response.length; pas++) {
+    specielist.push(response[pas]["name"] + "\n")
+  }
+  return specielist
+}
+
+let listofvehiclesghibli = (response) => {
+  let specielist = []
+  for (let pas = 0; pas < response.length; pas++) {
+    specielist.push(response[pas]["name"] + "\n")
+  }
+  return specielist
+}
+
+
+let getIdmoviebymoviename = (response, movie, category) => {
+  let allInfo = response
+  if(category == "resume"){category = "description"}
+  for (let pas = 0; pas < response.length; pas++) {
+    var uno = allInfo[pas]["title"].toLowerCase()
+    var dos = movie.toLowerCase()
+
+    if (uno == dos) {
+      if (category == "information") {
+        var info = []
+        var key = Object.keys(allInfo[pas])
+        for (let temp = 0; temp < key.length-6; temp++) {
+          var cat = key[temp].toString()
+          info.push(cat + ":\n" + allInfo[pas][cat] + "\n\n")
+        }
+        return info
+      }
+
+      else {
+        return allInfo[pas][category]
+      }
+
+    }
+  }
+  return "Not found"
+}
+
 
 
 
@@ -51,9 +95,13 @@ server.post('/', (request, response, data) => {
           break;
         //console.log(cb.entities.greeting,"to you!")
 
+
+
         case 'Exit':
           FB.sendMessage("RESPONSE", userData.sender, "See you soon!")
           break;
+
+
 
         case 'Current weather':
           //console.log(cb.entities.time, ', the weather in', cb.entities.city, "is")// get weather data from an API
@@ -65,40 +113,64 @@ server.post('/', (request, response, data) => {
             })
             .catch(error => {
               FB.sendMessage("RESPONSE", userData.sender, "There seems to be a problem connecting to the Weather service!")
-
             });
           break;
 
+
+
         case 'GetAllMovies':
-          //FB.sendMessage("RESPONSE", userData.sender, "Studio Ghibli")
+          FB.sendMessage("RESPONSE", userData.sender, "Here is a complete list of studio ghibli movies! if you want more information about a movie just ask :)")
           Ghibli(cb.intent)
             .then(response => {
-              //function get Movie
               let parseResult = listofmoviesghibli(response);
-              console.log(parseResult)
-              let parseResult_tostring = parseResult.toString()
-              FB.sendMessage("RESPONSE", userData.sender, "Here is a complete list of studio ghibli movies! if you want more information about a movie just write its name :) \n \n " + parseResult_tostring)
-
-            }
-            )
+              let parseResult_tostring = parseResult.toString().replace(/,/g, '')
+              FB.sendMessage("RESPONSE", userData.sender, parseResult_tostring)
+            })
           break;
+
+
 
         case 'GetMovieDescription':
-          FB.sendMessage("RESPONSE", userData.sender, "foooo")
-          console.log(cb.intent + "zoa" + cb.entities.movie_name)
-          //console.log(cb.entities.movie_name)
+          if (cb.entities.type_of_request == "information") {
+            FB.sendMessage("RESPONSE", userData.sender, "Here is the complete list of informations about " + cb.entities.movie_name + " movie, enjoy :) ")
+          }
+          else {
+            FB.sendMessage("RESPONSE", userData.sender, "Here is the " + cb.entities.type_of_request + " of " + cb.entities.movie_name)
+          }
+          Ghibli(cb.intent)
+            .then(response => {
+              var category = cb.entities.type_of_request.replace(/\s/g, "_")
+              let parseResult = getIdmoviebymoviename(response, cb.entities.movie_name, category);
+              let parseResult_tostring = parseResult.toString().replace(/,/g, '')
+              FB.sendMessage("RESPONSE", userData.sender, parseResult_tostring)
+            })
           break;
-
 
 
 
         case 'GetAllSpecies':
-          FB.sendMessage("RESPONSE", userData.sender, cb.intent)
-          console.log(cb.intent + "zoa" + cb.entities.movie_name)
+          FB.sendMessage("RESPONSE", userData.sender, "You want to know the species of the ghibli studio! Nothing could be easier : ")
+          Ghibli(cb.intent)
+            .then(response => {
+              let parseResult = listofspeciesghibli(response);
+              //console.log(parseResult)
+              let parseResult_tostring = parseResult.toString().replace(/,/g, '')
+              FB.sendMessage("RESPONSE", userData.sender, parseResult_tostring)
+            })
           break;
 
 
 
+        case 'GetAllVehicles':
+          FB.sendMessage("RESPONSE", userData.sender, "You want to know the species of the ghibli studio! Nothing could be easier : ")
+          Ghibli(cb.intent)
+            .then(response => {
+              let parseResult = listofvehiclesghibli(response);
+              //console.log(parseResult)
+              let parseResult_tostring = parseResult.toString().replace(/,/g, '')
+              FB.sendMessage("RESPONSE", userData.sender, parseResult_tostring)
+            })
+          break;
 
 
         default:

@@ -25,16 +25,22 @@ const patternDict = [
         intent: 'GetAllMovies',
     },
     {
-        pattern: "\\b(description|resume|information|tell)\\sof|about|more\\s\\b(?<movie_name>From Up on Poppy Hill)",
+        pattern: '\\b(?<type_of_request>information|resume|original\\stitle|original\\stitle\\sromanised|description|director|producer|release\\sdate)\\s(of|about|more)\\s\\b(?<movie_name>(?<=(of|about)\\s)[\\s\\S]*\\b)',
         intent: "GetMovieDescription",
         entities:
         {
             movie_name: "Totoro",
+            type_of_request: "Description"
         }
     },
     {
         pattern: '\\b(specie|species)\\b',
         intent: 'GetAllSpecies',
+    },
+    
+    {
+        pattern: '\\b(vehicle|vehicles)\\b',
+        intent: 'GetAllVehicles',
     },
 ];
 module.exports = patternDict;
