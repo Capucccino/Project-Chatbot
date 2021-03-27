@@ -3,12 +3,18 @@
 * [Anime Recommender](#Anime-Recommender)
 
 ## Anime Studio Ghibli Chatbot
-To run this project, you need first to install all the packages required: 
+
+### Setup
+The Studio Ghibli Chatbot is coded in Node.js. If you want to use it just follow these steps:
+
+* you need first to install all the packages required: 
 
 ```
-$ cd ../lorem
+$ cd ../movieBot
 $ npm install i
 $ npm install express
 ```
+* Get a Facebook Messenger app setup on the Facebook developers’ platform, to get a page token.
+
 
 ## Anime Recommender
