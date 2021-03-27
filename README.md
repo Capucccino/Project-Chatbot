@@ -1,3 +1,6 @@
+![logo](https://user-images.githubusercontent.com/64537874/112735427-24a4d200-8f4c-11eb-81b8-47ae3a6b6342.png)
+
+
 ## Table of contents
 * [Anime Studio Ghibli Chatbot](#Anime-Studio-Ghibli-Chatbot)
 * [Anime Recommender](#Anime-Recommender)
@@ -34,15 +37,15 @@ Here are some screenshots showing all the questions you can ask to our API.
 We also made a [demonstration video](https://www.youtube.com/watch?v=z4e8lvSg4-Y) on youtube to show you how it works. 
 
 
-Hello
+__Hello__
 
 ![image](https://user-images.githubusercontent.com/64537874/112734684-97f81500-8f47-11eb-9196-94bf1f69fdb7.png)
 
-List of movies from studio Ghibli
+__List of movies from studio Ghibli__
 
 ![image](https://user-images.githubusercontent.com/64537874/112734745-ec02f980-8f47-11eb-9fb4-a682788a1be3.png)
 
-Information about a movie `title - original_title - original_title_romanised - description - director - producer - release_date`
+__Information about a movie :__ title - original_title - original_title_romanised - description - director - producer - release_date
 ![image](https://user-images.githubusercontent.com/64537874/112735140-91b76800-8f4a-11eb-81c9-c1c396e97f71.png)
 ![image](https://user-images.githubusercontent.com/64537874/112735166-a72c9200-8f4a-11eb-8abd-9fbc93c91d5a.png)
 
@@ -51,11 +54,11 @@ Information about a movie `title - original_title - original_title_romanised - d
 ![image](https://user-images.githubusercontent.com/64537874/112734972-67b17600-8f49-11eb-9a84-6d1c57df4717.png)
 ![image](https://user-images.githubusercontent.com/64537874/112735018-a810f400-8f49-11eb-926f-c025d2a12f80.png)
 
-Information about species in Ghibli movies
+__Information about species in Ghibli movies__
 
 ![image](https://user-images.githubusercontent.com/64537874/112735049-e0b0cd80-8f49-11eb-8d84-c0710c569e8d.png)
 
-Information about vehicles in Ghibli movies
+__Information about vehicles in Ghibli movies__
 
 ![image](https://user-images.githubusercontent.com/64537874/112735091-42713780-8f4a-11eb-9722-b5c8452515bc.png)
 
