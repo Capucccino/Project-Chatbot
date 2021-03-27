@@ -36,17 +36,15 @@ const getGhibli = intent => {
                     );
                     resolve(vehiclesInformation.data) // returns back the results to the chatbot
                     break;
-
-
-
-
-
             }
         }
         catch (error) {
             reject(error);
+
         }
+
     });
+    
 }
 
 module.exports = getGhibli;

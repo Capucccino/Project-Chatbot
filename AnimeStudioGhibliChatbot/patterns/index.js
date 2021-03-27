@@ -12,15 +12,6 @@ const patternDict = [
         intent: 'Exit'
     },
     {
-        pattern: "\\b(weather)\\slike\\sin\\s\\b(?<city>[A-Za-z]+[A-Za-z]+?)\\s\\b(?<time>tomorrow|today|yesterday)",
-        intent: "Current weather",
-        entities:
-        {
-            city: "Paris",
-            time: "tomorrow"
-        }
-    },
-    {
         pattern: '\\b(all|Studio|Ghibli)\\b',
         intent: 'GetAllMovies',
     },
