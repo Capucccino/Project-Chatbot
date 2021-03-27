@@ -30,7 +30,10 @@ $ npm i ngrok
 Chatbot is ready !
 
 ### Demonstration
-Here are some screenshots showing all the questions you can ask to our API
+Here are some screenshots showing all the questions you can ask to our API. 
+We also made a [demonstration video](https://www.youtube.com/watch?v=z4e8lvSg4-Y) on youtube to show you how it works. 
+
+
 Hello
 
 ![image](https://user-images.githubusercontent.com/64537874/112734684-97f81500-8f47-11eb-9196-94bf1f69fdb7.png)
